@@ -1,41 +1,28 @@
-const { calcularParcelado } = require("../utils/calculos");
+const analisarDados = (dados) => {
+    const taxaD = parseFloat(dados.taxaDivida || 0);
+    const taxaI = parseFloat(dados.taxaInvestimento || 0);
 
-function simularCompra(preco, taxa, meses, avista) {
-  // cálculo bruto
-  const valorFinalBruto = calcularParcelado(preco, taxa, meses);
+    // Arredonda a diferença para 2 casas decimais
+    const diff = Math.abs(taxaD - taxaI).toFixed(2);
 
-  // valores formatados
-  const valorParcelado = Number(valorFinalBruto.toFixed(2));
-  const diferenca = Number((valorFinalBruto - preco).toFixed(2));
+    if (taxaD === taxaI) {
+        return {
+            decisao: "EMPATE: As taxas são iguais. Financeiramente é indiferente, escolha o que te der mais paz.",
+            detalhes: { diferencialTaxas: "0.00%", status: "Favorável" }
+        };
+    }
 
-  // decisão baseada no valor real (bruto)
-  let decisao;
+    const recomendacao = taxaD > taxaI 
+        ? "QUITAR DÍVIDA: O custo do seu juros é maior que o rendimento do investimento." 
+        : "INVESTIR: Seu dinheiro rende mais aplicado do que o custo da sua dívida.";
 
-  if (valorFinalBruto > preco * 1.3) {
-    decisao = "❌ Péssima escolha";
-  } else if (valorFinalBruto > preco * 1.1) {
-    decisao = "⚠️ Cuidado";
-  } else {
-    decisao = "✅ Boa escolha";
-  }
-
-  // comparação à vista
-  let melhorOpcao = null;
-
-  if (avista != null) {
-    melhorOpcao = avista < valorParcelado ? "À vista" : "Parcelado";
-  }
-
-  return {
-    precoOriginal: preco,
-    valorParcelado,
-    diferenca,
-    decisao,
-    valorAvista: avista ?? null,
-    melhorOpcao
-  };
-}
-
-module.exports = {
-  simularCompra
+    return {
+        decisao: recomendacao,
+        detalhes: {
+            diferencialTaxas: `${diff}%`,
+            status: taxaD > taxaI ? "Perigo" : "Favorável"
+        }
+    };
 };
+
+module.exports = { analisarDados };

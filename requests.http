@@ -1,4 +1,4 @@
-POST http://localhost:3000/api/simular
+POST http://localhost:3000/api/analisar
 Content-Type: application/json
 
 {

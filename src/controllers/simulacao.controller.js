@@ -1,17 +1,12 @@
-const { simularCompra } = require("../services/simulacao.service");
+const simulacaoService = require('../services/simulacao.service');
 
-function simular(req, res) {
-  const { preco, taxa, meses, avista } = req.body;
-
-  if (preco == null || taxa == null || meses == null) {
-    return res.status(400).json({ erro: "Dados inválidos" });
-  }
-
-  const resultado = simularCompra(preco, taxa, meses, avista);
-
-  return res.json(resultado);
-}
-
-module.exports = {
-  simular
+const calcularAnalise = (req, res) => {
+    try {
+        const resultado = simulacaoService.analisarDados(req.body);
+        return res.status(200).json(resultado);
+    } catch (error) {
+        return res.status(400).json({ error: "Erro ao processar análise financeira." });
+    }
 };
+
+module.exports = { calcularAnalise };

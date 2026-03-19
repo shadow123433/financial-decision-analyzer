@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador Financeiro Pro</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>💰 Analisador de Decisões</h2>
+            <div class="input-group">
+                <label>Valor da Dívida (R$)</label>
+                <input type="number" id="vDivida" step="0.01" min="0" max="99999999" placeholder="0.00">
+                
+                <label>Juros da Dívida (% ao mês)</label>
+                <input type="number" id="tDivida" step="0.01" min="0" max="100" placeholder="0.00">
+                
+                <label>Valor para Investir (R$)</label>
+                <input type="number" id="vInvest" step="0.01" min="0" max="99999999" placeholder="0.00">
+                
+                <label>Juros Investimento (% ao mês)</label>
+                <input type="number" id="tInvest" step="0.01" min="0" max="100" placeholder="0.00">
+            </div>
+            <button id="btnAnalisar">ANALISAR AGORA</button>
+            <div id="resultado" class="hidden">
+                <p id="textoDecisao"></p>
+                <span id="badgeStatus"></span>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
