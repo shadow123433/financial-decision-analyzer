@@ -1,0 +1,24 @@
+{
+  "name": "financial-decision-analyzer",
+  "version": "1.0.0",
+  "description": "Sistema para análise inteligente de decisões financeiras pessoais.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadow123433/financial-decision-analyzer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/shadow123433/financial-decision-analyzer/issues"
+  },
+  "homepage": "https://github.com/shadow123433/financial-decision-analyzer#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

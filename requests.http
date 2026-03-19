@@ -1,0 +1,9 @@
+POST http://localhost:3000/api/simular
+Content-Type: application/json
+
+{
+  "preco": 1000,
+  "taxa": 0.02,
+  "meses": 12,
+  "avista": 900
+}
