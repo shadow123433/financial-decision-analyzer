@@ -43,4 +43,50 @@ A aplicação permite simular cenários de compra e fornece uma análise clara s
 
 ## 🧮 Fórmula utilizada
 
-Juros compostos:
+Juros compostos: M = P (1 + i)^n
+
+Onde:
+- M = valor final  
+- P = valor inicial  
+- i = taxa de juros  
+- n = número de períodos  
+
+---
+
+## 🛠️ Tecnologias
+
+- Node.js  
+- Express  
+- PostgreSQL  
+- React (futuro)  
+
+---
+
+## 🚀 Status do Projeto
+
+🚧 Em desenvolvimento
+
+---
+
+## 📌 Próximos passos
+
+- [ ] Criar API de simulação financeira  
+- [ ] Implementar cálculo de juros  
+- [ ] Criar sistema de análise de decisão  
+- [ ] Desenvolver interface web  
+- [ ] Adicionar histórico de simulações  
+
+---
+
+## 📈 Objetivo
+
+Este projeto faz parte do meu portfólio como desenvolvedor, com foco em:
+- Lógica de negócio  
+- Estrutura de backend  
+- Resolução de problemas reais  
+
+---
+
+## 👨‍💻 Autor
+
+Thiago Martins
