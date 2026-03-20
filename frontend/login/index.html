@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- ESSENCIAL PRA MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/login.css  ">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="box">
+
+            <div class="slider" id="slider">
+
+                <!-- LOGIN -->
+                <div class="screen">
+                    <div class="logo">
+                        <img src="imagens/logo-app.png" alt="logo">
+                    </div>
+                    <h2>Faça seu Login</h2>
+
+                    <input type="email" placeholder="Email">
+                    <div class="input-box">
+                        <input type="password" id="senhaLogin" placeholder="Senha" required>
+                        <span class="toggle-password" data-target="senhaLogin">👁️</span>
+                    </div>
+
+                    <button>Entrar</button>
+
+                    <p>Não tem conta?
+                        <span id="goRegister">Criar</span>
+                    </p>
+                </div>
+
+                <!-- CADASTRO -->
+                <div class="screen">
+                    <div class="logo">
+                        <img src="imagens/logo-app.png" alt="logo">
+                    </div>
+                    <h2>Crie sua conta</h2>
+
+                    <input type="text" placeholder="Nome">
+                    <input type="email" placeholder="Email">
+                    <div class="input-box">
+                        <input type="password" id="senhaCadastro" placeholder="Senha" required>
+                        <span class="toggle-password" data-target="senhaCadastro">👁️</span>
+                    </div>
+
+                    <button>Cadastrar</button>
+
+                    <p>Já tem conta?
+                        <span id="goLogin">Entrar</span>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

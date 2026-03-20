@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Valorize - Investimentos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../styles/valorize.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <header class="header">
+            <div class="user-greeting">
+                <h2>Olá, Guilherme</h2>
+                <span>Sua carteira hoje</span>
+            </div>
+            <div class="user-avatar">
+                <img src="../imagens/logo-app.png" alt="Logo">
+            </div>
+        </header>
+
+        <main class="content-scroll">
+
+            <section class="tab active" id="home">
+                <section class="balance">
+                    <p style="color: #94a3b8; margin-top: 20px;">Saldo disponível</p>
+                    <h1 id="saldo">R$ 2.500</h1>
+                </section>
+
+                <section class="cards">
+                    <div class="card">
+                        <p style="font-size: 14px; color: #94a3b8;">Gastos</p>
+                        <h3 style="color: #ef4444;">R$ 1.200</h3>
+                    </div>
+                    <div class="card">
+                        <p style="font-size: 14px; color: #94a3b8;">Economia</p>
+                        <h3 style="color: #22c55e;">R$ 1.300</h3>
+                    </div>
+                </section>
+
+                <div class="chart">
+                    <p style="margin-bottom: 10px;">Desempenho Semanal</p>
+                    <canvas id="grafico"></canvas>
+                </div>
+
+                <button class="add-btn">+</button>
+            </section>
+
+            <section class="tab" id="stats">
+                <div class="balance" style="text-align: center; margin: 20px 0;">
+                    <p style="color: #94a3b8;">Patrimônio Total</p>
+                    <h1>R$ 28.450,00</h1>
+                </div>
+
+                <div class="chart">
+                    <p style="text-align: center; margin-bottom: 15px;">Alocação de Ativos</p>
+                    <canvas id="chartAlocacao"></canvas>
+                </div>
+
+                <h3 style="margin: 20px 0 10px 5px;">Aportar Capital</h3>
+
+                <div class="card big" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <i class="fa-brands fa-pix" style="color: #32bcad; font-size: 24px;"></i>
+                        <div>
+                            <strong>Via Pix</strong>
+                            <p style="font-size: 12px; color: #94a3b8;">Instantâneo</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right" style="opacity: 0.3;"></i>
+                </div>
+
+                <div class="card big" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <i class="fas fa-credit-card" style="color: #6366f1; font-size: 20px;"></i>
+                        <div>
+                            <strong>Cartão</strong>
+                            <p style="font-size: 12px; color: #94a3b8;">Até 12x</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right" style="opacity: 0.3;"></i>
+                </div>
+
+                <div class="card big"
+                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <i class="fas fa-barcode" style="color: #94a3b8; font-size: 20px;"></i>
+                        <div>
+                            <strong>Boleto</strong>
+                            <p style="font-size: 12px; color: #94a3b8;">Compensação 2 dias</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right" style="opacity: 0.3;"></i>
+                </div>
+            </section>
+
+            <section class="tab" id="simulator">
+                <h2>Simular compra</h2>
+                <input type="number" id="valor" placeholder="Valor da compra">
+                <input type="number" id="parcelas" placeholder="Parcelas">
+                <input type="number" id="juros" placeholder="Juros %">
+                <button onclick="simular()">Simular</button>
+                <div class="resultado" id="resultado"></div>
+            </section>
+
+            <section class="tab" id="settings">
+                <h2>Configurações</h2>
+                <button class="logout" style="background: #334155;">Sair</button>
+            </section>
+
+        </main>
+
+        <nav class="bottom-nav">
+            <span data-tab="home" class="active"><i class="fas fa-house"></i></span>
+            <span data-tab="stats"><i class="fas fa-chart-pie"></i></span>
+            <span data-tab="simulator"><i class="fas fa-wallet"></i></span>
+            <span data-tab="settings"><i class="fas fa-gear"></i></span>
+        </nav>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/valorize.js"></script>
+</body>
+
+</html>

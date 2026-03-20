@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.logo img {
+  width: 130px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+
+/* Container central */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: -15px;
+}
+
+/* Caixa principal */
+.box {
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  background: #020617;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+/* Cada tela */
+.screen {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+/* Título */
+.screen h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* Texto */
+.screen p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+input {
+  margin-bottom: 15px;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #0f172a;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+/* Foco */
+input:focus {
+  border: 1px solid #22c55e;
+  box-shadow: 0 0 0 2px rgba(34,197,94,0.2);
+}
+
+
+.input-box {
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 14px;
+  padding-right: 45px; /* espaço pro ícone */
+  border-radius: 10px;
+  border: none;
+  background: #0f172a;
+  color: white;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.toggle-password:hover {
+  opacity: 1;
+}
+
+/* Botão */
+button {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hover */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(34,197,94,0.4);
+}
+
+/* Active */
+button:active {
+  transform: scale(0.97);
+}
+
+/* Link */
+span {
+  color: #22c55e;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer */
+.screen p:last-child {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Desktop melhora */
+@media (min-width: 600px) {
+  .box {
+    height: 650px;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+}

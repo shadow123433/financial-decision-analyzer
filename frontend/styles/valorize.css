@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  overflow: hidden; /* evita scrollbar global */
+  background: #020617;
+  font-family: 'Segoe UI';
+  color: white;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ocupa a altura da tela sem passar */
+  overflow: hidden; 
+}
+
+.content-scroll {
+  flex: 1; /* Ocupa o espaço restante */
+  overflow-y: auto; /* ATIVA O SCROLL AQUI */
+  padding: 20px;
+  padding-bottom: 100px; /* Garante que o último item não fique atrás do menu */
+  
+  /* --- CÓDIGO PARA ESCONDER A BARRA --- */
+  scrollbar-width: none;          /* Para Firefox */
+  -ms-overflow-style: none;       /* Para Internet Explorer e Edge antigo */
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Texto na esquerda, logo na direita */
+    align-items: center;           /* Alinha verticalmente no centro */
+    padding: 25px;  
+    height: 70px;          /* Mais respiro nas laterais e topo */
+    background: #020617;           /* Mesma cor do fundo */
+    position: sticky;              /* Fica fixo no topo se precisar */
+    top: 0;
+    z-index: 100;
+}
+
+.user-greeting h2 {
+    position: relative;
+    font-size: 1.4rem;            /* Tamanho de leitura rápida */
+    font-weight: 600;
+    letter-spacing: -0.5px;       /* Toque moderno de tipografia */
+    top: 20px;
+}
+
+.user-greeting span {
+    font-size: 0.85rem;
+    color: #94a3b8;               /* Cinza suave para a legenda */
+    display: block;               /* Garante que fique embaixo do nome */
+    margin-top: 25px;
+
+}
+
+/* Deixa a logo redonda e com borda, estilo foto de perfil */
+.user-avatar img {
+    margin-top: 40px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;           /* Foto redonda */
+    object-fit: cover;
+    border: 2px solid #1e293b;    /* Borda sutil para destaque */
+    background: #0f172a;          /* Fundo caso a logo seja transparente */
+}
+
+.balance h1 {
+  font-size: 32px;
+}
+
+.cards {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1;
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.card.big {
+  margin-top: 15px;
+}
+
+.card.big strong {
+    display: block;       /* Garante que ocupe a linha toda */
+    margin-top: 20px;
+    font-size: 16px;      /* Tamanho confortável para mobile */
+    font-weight: 600;     /* Nem muito fino, nem muito grosso */
+    color: #f8fafc;       /* Um branco levemente acinzentado (menos agressivo) */
+    letter-spacing: 0.3px; /* Um tcham na legibilidade */
+}
+
+/* Ajuste no parágrafo para ele não "brigar" com o strong */
+.card.big p {
+    margin-top: 2px;      /* Espaço controlado entre o título e a legenda */
+    font-weight: 400;
+}
+
+
+
+.chart {
+  margin-top: 20px;
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #0f172a;
+  color: white;
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  font-weight: bold;
+}
+
+.add-btn {
+  position: fixed;
+  cursor: pointer;
+  bottom: 90px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 65px;
+
+  background: #0f172a;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.bottom-nav span {
+  opacity: 0.5;
+}
+
+.bottom-nav span.active {
+  opacity: 1;
+}
+
+.tab {
+  display: none;
+}
+
+.tab h2{
+  margin: 5px;
+  margin-left: 5px;
+}
+
+.tab.active {
+  display: block;
+}
+
+#simulator input {
+    padding: 10px;        /* Estava 14px, 10px já fica bem mais discreto */
+    font-size: 14px;      /* Fonte um pouco menor ajuda no equilíbrio */
+    margin-top: 10px;      /* Diminui a distância entre eles */
+    height: 30px;         /* Você pode fixar uma altura menor se preferir */
+    width: 90%;
+    
+}
+
+.resultado {
+  margin-top: 15px;
+}
