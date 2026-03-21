@@ -5,12 +5,12 @@ Aplicação web desenvolvida para simular decisões financeiras, permitindo comp
 ---
 
 # Demonstração em vídeo
-ainda em produção
+https://youtu.be/ysdaTrBIiP8
 
 ---
 
 # Sistema online
-ainda em produção
+https://financial-decision-analyzer.onrender.com
 
 ---
 
