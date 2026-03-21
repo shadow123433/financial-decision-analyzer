@@ -13,9 +13,15 @@ const analisarDados = (dados) => {
 
     const ultimo = historico[historico.length - 1];
 
-    const decisao = ultimo.divida > ultimo.investimento
-        ? "QUITAR DÍVIDA: A dívida cresceu mais que o investimento."
-        : "INVESTIR: O investimento superou a dívida.";
+    let decisao;
+
+    if (ultimo.divida > ultimo.investimento) {
+    decisao = "QUITAR DÍVIDA: A dívida cresceu mais que o investimento.";
+    } else if (ultimo.investimento > ultimo.divida) {
+    decisao = "INVESTIR: O investimento superou a dívida.";
+    } else {
+    decisao = "EMPATE: Tanto faz financeiramente. Escolha com base em risco, liquidez ou preferência pessoal.";
+    }
 
     return {
         decisao,
