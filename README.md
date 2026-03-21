@@ -5,12 +5,12 @@ Aplicação web desenvolvida para simular decisões financeiras, permitindo comp
 ---
 
 # Demonstração em vídeo
-https://seu-link-aqui.com
+ainda em produção
 
 ---
 
 # Sistema online
-https://seu-link-aqui.com
+ainda em produção
 
 ---
 
