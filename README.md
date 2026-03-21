@@ -1,92 +1,99 @@
-# 💰 Financial Decision Analyzer
+# 💰 Analisador Financeiro Pro
 
-Sistema para análise inteligente de decisões financeiras pessoais.
-
-O objetivo é ajudar usuários a tomarem decisões mais conscientes ao realizar compras, mostrando o impacto real de juros, parcelamentos e comprometimento da renda.
+Aplicação full stack desenvolvida para simular decisões financeiras entre **quitar dívidas** ou **investir dinheiro**, utilizando juros compostos e visualização gráfica da evolução ao longo do tempo.
 
 ---
 
-## 🚨 Problema
+## 🚀 Sobre o projeto
 
-Muitas pessoas:
-- Não calculam juros corretamente  
-- Compram por impulso  
-- Não sabem o impacto real no orçamento  
+O **Analisador Financeiro Pro** permite ao usuário comparar cenários reais de decisão financeira com base em:
 
-Isso leva a decisões financeiras ruins e acúmulo de dívidas.
+- Valor da dívida
+- Taxa de juros da dívida
+- Valor disponível para investimento
+- Taxa de rendimento
+- Tempo (em meses)
+
+A aplicação calcula a evolução mês a mês e fornece:
+
+- 📊 Comparação final entre dívida e investimento  
+- 📈 Gráfico dinâmico de evolução  
+- 🧠 Recomendação automática baseada nos resultados  
 
 ---
 
-## 🎯 Solução
+## 🧠 Tecnologias utilizadas
 
-A aplicação permite simular cenários de compra e fornece uma análise clara sobre a decisão.
+### Backend
+- Node.js
+- Express
+- CORS
+
+### Frontend
+- HTML5
+- CSS3
+- JavaScript (ES Modules)
+- Chart.js
+
+---
+
+## 📂 Estrutura do projeto
+├── frontend/
+│ ├── js/
+│ │ ├── api.js
+│ │ ├── chart.js
+│ │ ├── main.js
+│ │ └── ui.js
+│ ├── styles/
+│ │ └── main.css
+│ └── index.html
+│
+├── src/
+│ ├── controllers/
+│ │ └── simulacao.controller.js
+│ ├── routes/
+│ │ └── simulacao.routes.js
+│ ├── services/
+│ │ └── simulacao.service.js
+│ ├── utils/
+│ │ └── calculos.js
+│ └── app.js
+│
+├── server.js
+├── package.json
+└── README.md
+
 
 ---
 
 ## ⚙️ Funcionalidades
 
-### ✅ Simulação de compra
-- Comparação entre pagamento à vista e parcelado  
-- Cálculo de juros compostos  
-
-### 📊 Análise financeira
-- Impacto da compra na renda mensal  
-- Percentual comprometido do orçamento  
-
-### 🧠 Score de decisão
-- Classificação da compra:
-  - ✅ Boa decisão  
-  - ⚠️ Atenção  
-  - ❌ Má decisão  
+- Simulação de dívida vs investimento
+- Cálculo de juros compostos mês a mês
+- Comparação baseada em tempo
+- Gráfico interativo com Chart.js
+- Feedback automático de decisão
+- Tratamento de erros básicos
 
 ---
 
-## 🧮 Fórmula utilizada
+## 🛠️ Como executar o projeto
 
-Juros compostos: M = P (1 + i)^n
+### 🔽 1. Clone o repositório
 
-Onde:
-- M = valor final  
-- P = valor inicial  
-- i = taxa de juros  
-- n = número de períodos  
+```bash
+git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
 
----
 
-## 🛠️ Tecnologias
+### 🔽 1. Entre na pasta do projeto
+cd SEU-REPOSITORIO
+code .
 
-- Node.js  
-- Express  
-- PostgreSQL  
-- React (futuro)  
 
----
+### 🔽 1. Instale as dependências.
+npm install
 
-## 🚀 Status do Projeto
 
-🚧 Em desenvolvimento
+### 🔽 1. Ative o servidor.
+node server.js
 
----
-
-## 📌 Próximos passos
-
-- [ ] Criar API de simulação financeira  
-- [ ] Implementar cálculo de juros  
-- [ ] Criar sistema de análise de decisão  
-- [ ] Desenvolver interface web  
-- [ ] Adicionar histórico de simulações  
-
----
-
-## 📈 Objetivo
-
-Este projeto faz parte do meu portfólio como desenvolvedor, com foco em:
-- Lógica de negócio  
-- Estrutura de backend  
-- Resolução de problemas reais  
-
----
-
-## 👨‍💻 Autor
-
-Thiago Martins
