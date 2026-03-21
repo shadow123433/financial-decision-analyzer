@@ -48,24 +48,24 @@ https://seu-link-aqui.com
 Clone o repositório:
 
 ```bash
-git clone https://github.com/shadow123433/school-uniform-order-system.git
+git clone https://github.com/shadow123433/financial-decision-analyzer.git
 ```
 
 Entre na pasta do projeto:
 
 ```bash
-cd school-uniform-order-system
+cd financial-decision-analyzer
 code .
 ```
 
-Entre na pasta backend:
-
-```bash
-cd backend
-```
-
-Instale as dependências dentro da pasta backend:
+Instale as dependências:
 
 ```bash
 npm install
+```
+
+Rode o servidor:
+
+```bash
+node server.js
 ```
