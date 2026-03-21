@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Credit Card Form</title>
+    <link rel="stylesheet" href="../frontend/styles/cartao.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card-container">
+            <div class="card-inner" id="card-inner">
+                <div class="card-front">
+                    <div class="card-top">
+                        <div class="chip"></div>
+                        <div class="visa-logo">VISA</div>
+                    </div>
+                    <div class="card-number" id="display-number">#### #### #### ####</div>
+                    <div class="card-info">
+                        <div class="info-group">
+                            <label>Card Holder</label>
+                            <div id="display-name">NOME COMPLETO</div>
+                        </div>
+                        <div class="info-group">
+                            <label>Expires</label>
+                            <div id="display-expiry">MM/YY</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="black-strip"></div>
+                    <div class="cvv-section">
+                        <label>cvv</label>
+                        <div class="cvv-box" id="display-cvv">***</div>
+                    </div>
+                    <div class="visa-logo">VISA</div>
+                </div>
+            </div>
+        </div>
+
+        <form class="card-form">
+            <div class="input-group">
+                <label>Card Number</label>
+                <input type="text" id="input-number" inputmode="numeric" maxlength="19"
+                    placeholder="0000 0000 0000 0000">
+            </div>
+            <div class="input-group">
+                <label>Card Holder</label>
+                <input type="text" id="input-name" placeholder="Nome impresso no cartão">
+            </div>
+            <div class="row">
+                <div class="group-expiration">
+                    <label>Expiration Date</label>
+                    <div class="date-selects">
+                        <select id="input-month">
+                            <option value="" disabled selected>MM</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+
+                        <select id="input-year">
+                            <option value="" disabled selected>YY</option>
+                            <option value="2024">24</option>
+                            <option value="2025">25</option>
+                            <option value="2026">26</option>
+                            <option value="2027">27</option>
+                            <option value="2028">28</option>
+                            <option value="2029">29</option>
+                            <option value="2030">30</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="group-cvv">
+                    <label>CVV</label>
+                    <input type="text" id="input-cvv" maxlength="4" placeholder="***" inputmode="numeric">
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Pagar Agora</button>
+
+            <script src="../frontend/js/cartao.js"></script>
+</body>
+
+</html>
