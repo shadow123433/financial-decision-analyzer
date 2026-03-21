@@ -21,7 +21,7 @@ https://seu-link-aqui.com
 - Express
 - HTML
 - CSS
-- Chart.js
+
 
 ---
 
