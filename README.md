@@ -82,11 +82,11 @@ A aplicação calcula a evolução mês a mês e fornece:
 ### 🔽 1. Clone o repositório
 
 ```bash
-git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+git clone https://github.com/shadow123433/financial-decision-analyzer.git
 
 
 ### 🔽 1. Entre na pasta do projeto
-cd SEU-REPOSITORIO
+cd financial-decision-analyzer
 code .
 
 
