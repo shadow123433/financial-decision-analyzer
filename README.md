@@ -1,6 +1,6 @@
 # 💰 Analisador Financeiro Pro
 
-Aplicação full stack desenvolvida para simular decisões financeiras entre **quitar dívidas** ou **investir dinheiro**, utilizando juros compostos e visualização gráfica da evolução ao longo do tempo.
+Aplicação desenvolvida para simular decisões financeiras entre **quitar dívidas** ou **investir dinheiro**, utilizando juros compostos e visualização gráfica da evolução ao longo do tempo.
 
 ---
 
