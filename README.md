@@ -1,92 +1,72 @@
-# 💰 Financial Decision Analyzer
+# 💰 Analisador Financeiro Pro
 
-Sistema para análise inteligente de decisões financeiras pessoais.
-
-O objetivo é ajudar usuários a tomarem decisões mais conscientes ao realizar compras, mostrando o impacto real de juros, parcelamentos e comprometimento da renda.
+Aplicação web desenvolvida para simular decisões financeiras, permitindo comparar se é mais vantajoso quitar uma dívida ou investir um valor ao longo do tempo, com base em juros compostos.
 
 ---
 
-## 🚨 Problema
-
-Muitas pessoas:
-- Não calculam juros corretamente  
-- Compram por impulso  
-- Não sabem o impacto real no orçamento  
-
-Isso leva a decisões financeiras ruins e acúmulo de dívidas.
+# Demonstração em vídeo
+https://seu-link-aqui.com
 
 ---
 
-## 🎯 Solução
-
-A aplicação permite simular cenários de compra e fornece uma análise clara sobre a decisão.
-
----
-
-## ⚙️ Funcionalidades
-
-### ✅ Simulação de compra
-- Comparação entre pagamento à vista e parcelado  
-- Cálculo de juros compostos  
-
-### 📊 Análise financeira
-- Impacto da compra na renda mensal  
-- Percentual comprometido do orçamento  
-
-### 🧠 Score de decisão
-- Classificação da compra:
-  - ✅ Boa decisão  
-  - ⚠️ Atenção  
-  - ❌ Má decisão  
+# Sistema online
+https://seu-link-aqui.com
 
 ---
 
-## 🧮 Fórmula utilizada
+## Tecnologias utilizadas
 
-Juros compostos: M = P (1 + i)^n
+- JavaScript
+- Node.js
+- Express
+- HTML
+- CSS
 
-Onde:
-- M = valor final  
-- P = valor inicial  
-- i = taxa de juros  
-- n = número de períodos  
-
----
-
-## 🛠️ Tecnologias
-
-- Node.js  
-- Express  
-- PostgreSQL  
-- React (futuro)  
 
 ---
 
-## 🚀 Status do Projeto
+## Funcionalidades
 
-🚧 Em desenvolvimento
-
----
-
-## 📌 Próximos passos
-
-- [ ] Criar API de simulação financeira  
-- [ ] Implementar cálculo de juros  
-- [ ] Criar sistema de análise de decisão  
-- [ ] Desenvolver interface web  
-- [ ] Adicionar histórico de simulações  
+- Simulação de dívida vs investimento
+- Cálculo de juros compostos mês a mês
+- Comparação de cenários ao longo do tempo
+- Gráfico interativo de evolução
+- Recomendação automática baseada nos resultados
+- API REST para comunicação entre frontend e backend
 
 ---
 
-## 📈 Objetivo
+## Estrutura do projeto
+/frontend → Interface da aplicação
 
-Este projeto faz parte do meu portfólio como desenvolvedor, com foco em:
-- Lógica de negócio  
-- Estrutura de backend  
-- Resolução de problemas reais  
+/backend → Servidor e API
+
 
 ---
 
-## 👨‍💻 Autor
+## Como executar o projeto
 
-Thiago Martins
+Clone o repositório:
+
+```bash
+git clone https://github.com/shadow123433/financial-decision-analyzer.git
+```
+
+Entre na pasta do projeto:
+
+```bash
+cd financial-decision-analyzer
+code .
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Rode o servidor:
+
+```bash
+node server.js
+```
