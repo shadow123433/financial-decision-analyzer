@@ -38,6 +38,7 @@ https://seu-link-aqui.com
 
 ## Estrutura do projeto
 /frontend → Interface da aplicação
+
 /backend → Servidor e API
 
 
