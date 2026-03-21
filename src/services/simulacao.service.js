@@ -1,27 +1,27 @@
+const { simularMeses } = require('../utils/calculos');
+
 const analisarDados = (dados) => {
-    const taxaD = parseFloat(dados.taxaDivida || 0);
-    const taxaI = parseFloat(dados.taxaInvestimento || 0);
+    const { valorDivida, taxaDivida, valorInvestimento, taxaInvestimento, meses } = dados;
 
-    // Arredonda a diferença para 2 casas decimais
-    const diff = Math.abs(taxaD - taxaI).toFixed(2);
+    const historico = simularMeses(
+        valorDivida,
+        taxaDivida,
+        valorInvestimento,
+        taxaInvestimento,
+        meses || 12
+    );
 
-    if (taxaD === taxaI) {
-        return {
-            decisao: "EMPATE: As taxas são iguais. Financeiramente é indiferente, escolha o que te der mais paz.",
-            detalhes: { diferencialTaxas: "0.00%", status: "Favorável" }
-        };
-    }
+    const ultimo = historico[historico.length - 1];
 
-    const recomendacao = taxaD > taxaI 
-        ? "QUITAR DÍVIDA: O custo do seu juros é maior que o rendimento do investimento." 
-        : "INVESTIR: Seu dinheiro rende mais aplicado do que o custo da sua dívida.";
+    const decisao = ultimo.divida > ultimo.investimento
+        ? "QUITAR DÍVIDA: A dívida cresceu mais que o investimento."
+        : "INVESTIR: O investimento superou a dívida.";
 
     return {
-        decisao: recomendacao,
-        detalhes: {
-            diferencialTaxas: `${diff}%`,
-            status: taxaD > taxaI ? "Perigo" : "Favorável"
-        }
+        decisao,
+        dividaFinal: ultimo.divida,
+        investimentoFinal: ultimo.investimento,
+        historico
     };
 };
 

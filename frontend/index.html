@@ -10,26 +10,45 @@
     <div class="container">
         <div class="card">
             <h2>💰 Analisador de Decisões</h2>
+
             <div class="input-group">
                 <label>Valor da Dívida (R$)</label>
-                <input type="number" id="vDivida" step="0.01" min="0" max="99999999" placeholder="0.00">
+                <input type="number" id="vDivida" step="0.01" min="0" placeholder="0.00">
                 
                 <label>Juros da Dívida (% ao mês)</label>
                 <input type="number" id="tDivida" step="0.01" min="0" max="100" placeholder="0.00">
                 
                 <label>Valor para Investir (R$)</label>
-                <input type="number" id="vInvest" step="0.01" min="0" max="99999999" placeholder="0.00">
+                <input type="number" id="vInvest" step="0.01" min="0" placeholder="0.00">
                 
-                <label>Juros Investimento (% ao mês)</label>
+                <label>Juros do Investimento (% ao mês)</label>
                 <input type="number" id="tInvest" step="0.01" min="0" max="100" placeholder="0.00">
+
+                <!-- NOVO -->
+                <label>Tempo (meses)</label>
+                <input type="number" id="meses" value="12" min="1">
             </div>
+
             <button id="btnAnalisar">ANALISAR AGORA</button>
+
+            <!-- ERRO -->
+            <div id="erro" style="color: #ef4444; margin-top: 10px;"></div>
+
+            <!-- RESULTADO -->
             <div id="resultado" class="hidden">
                 <p id="textoDecisao"></p>
                 <span id="badgeStatus"></span>
             </div>
+
+            <!-- GRÁFICO -->
+            <canvas id="grafico" style="margin-top: 20px;"></canvas>
         </div>
     </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Seu JS -->
     <script type="module" src="js/main.js"></script>
 </body>
 </html>

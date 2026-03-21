@@ -7,6 +7,9 @@ export const postAnalise = async (dados) => {
         body: JSON.stringify(dados)
     });
 
-    if (!response.ok) throw new Error('Erro na requisição');
+    if (!response.ok) {
+        throw new Error('Erro na requisição');
+    }
+
     return await response.json();
 };

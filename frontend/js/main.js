@@ -6,13 +6,14 @@ document.getElementById('btnAnalisar').addEventListener('click', async () => {
     const tDivida = parseFloat(document.getElementById('tDivida').value);
     const vInvest = parseFloat(document.getElementById('vInvest').value);
     const tInvest = parseFloat(document.getElementById('tInvest').value);
+    const meses = parseInt(document.getElementById('meses').value) || 12;
 
-    // Validação de sanidade (Bloqueia números absurdos ou negativos)
     if (isNaN(vDivida) || vDivida <= 0 || isNaN(vInvest) || vInvest <= 0) {
-        return mostrarErro("Por favor, insira valores válidos para Dívida e Investimento.");
+        return mostrarErro("Valores inválidos.");
     }
+
     if (tDivida < 0 || tDivida > 100 || tInvest < 0 || tInvest > 100) {
-        return mostrarErro("As taxas de juros devem estar entre 0 e 100%.");
+        return mostrarErro("Taxas devem estar entre 0 e 100.");
     }
 
     const btn = document.getElementById('btnAnalisar');
@@ -20,15 +21,17 @@ document.getElementById('btnAnalisar').addEventListener('click', async () => {
     btn.disabled = true;
 
     try {
-        const resultado = await postAnalise({ 
-            valorDivida: vDivida, 
-            taxaDivida: tDivida, 
-            valorInvestimento: vInvest, 
-            taxaInvestimento: tInvest 
+        const resultado = await postAnalise({
+            valorDivida: vDivida,
+            taxaDivida: tDivida,
+            valorInvestimento: vInvest,
+            taxaInvestimento: tInvest,
+            meses
         });
+
         mostrarResultado(resultado);
     } catch (error) {
-        mostrarErro("Servidor offline ou erro na conexão.");
+        mostrarErro("Erro na conexão com servidor.");
     } finally {
         btn.innerText = "ANALISAR AGORA";
         btn.disabled = false;
