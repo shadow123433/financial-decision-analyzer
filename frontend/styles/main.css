@@ -1,70 +1,130 @@
+/* --- CSS MOBILE SEM NENHUMA BARRA LATERAL --- */
+
+/* 1. Reset radical para tirar qualquer scrollbar visível */
+html,
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100dvh;
     background-color: #0f172a;
     color: #f8fafc;
+    font-family: 'Segoe UI', sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    align-items: flex-start;
+    overflow-x: hidden;
+    /* Proíbe scroll lateral */
+
+    /* Esconde barra no Firefox e IE */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
+/* Esconde barra no Chrome, Safari e Edge (Webkit) */
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    display: none;
+}
+
+.card img {
+    margin-left: 55px;
+    width: 150px;  /* Largura */
+    height: auto;  /* Mantém a proporção original */
+    
+}
+
+/* Ajuste opcional para o título não ficar colado */
+.titulo {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+
+/* 2. Estilo do Card focado em Mobile */
 .card {
     background: #1e293b;
-    padding: 2rem;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    padding: 1.5rem;
+    border-radius: 20px;
+    width: 90%;
+    /* Deixa um respiro nas laterais */
+    max-width: 420px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    margin: 20px auto;
+    box-sizing: border-box;
+    /* Se o card for muito longo, ele rola mas não mostra a barra */
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
+.card::-webkit-scrollbar {
+    display: none;
+}
+
+/* 3. Inputs e Botões */
 .input-group {
-    margin: 1.5rem 0;
+    margin-bottom: 1.2rem;
 }
 
 label {
     display: block;
-    font-size: 0.8rem;
-    margin-bottom: 5px;
+    font-size: 0.75rem;
+    font-weight: bold;
     color: #94a3b8;
+    margin-bottom: 6px;
+    text-transform: uppercase;
 }
 
 input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    background: #334155;
-    border: 1px solid #475569;
-    border-radius: 6px;
+    height: 50px;
+    padding: 10px 15px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 10px;
     color: white;
+    font-size: 16px;
+    /* Evita zoom no iOS */
     box-sizing: border-box;
 }
 
 button {
     width: 100%;
-    padding: 14px;
+    height: 55px;
     background: #10b981;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 12px;
     font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: background 0.2s;
+    margin-top: 10px;
 }
 
-button:hover { background: #059669; }
+button:active {
+    transform: scale(0.97);
+}
 
 #resultado {
     margin-top: 20px;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 12px;
     text-align: center;
 }
 
-.hidden { display: none; }
-.favoravel { background: #064e3b; border: 1px solid #10b981; }
-.perigo { background: #7f1d1d; border: 1px solid #ef4444; }
+.hidden {
+    display: none;
+}
 
+.favoravel {
+    background: #064e3b;
+    border: 1px solid #10b981;
+}
 
-
-/*alterar aqui*/
+.perigo {
+    background: #451a1a;
+    border: 1px solid #ef4444;
+}
