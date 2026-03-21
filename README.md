@@ -37,31 +37,31 @@ A aplicação calcula a evolução mês a mês e fornece:
 
 ---
 
-## 📂 Estrutura do projeto
-├── frontend/
-│ ├── js/
-│ │ ├── api.js
-│ │ ├── chart.js
-│ │ ├── main.js
-│ │ └── ui.js
-│ ├── styles/
-│ │ └── main.css
-│ └── index.html
+📂 financial-decision-analyzer
+├── 📁 frontend/              # Interface do Usuário (Client-side)
+│   ├── 📁 js/                # Lógica de scripts do frontend
+│   │   ├── 📄 api.js         # Consumo da API do backend
+│   │   ├── 📄 chart.js       # Configuração dos gráficos (Chart.js)
+│   │   ├── 📄 main.js        # Script principal de inicialização
+│   │   └── 📄 ui.js          # Manipulação do DOM e interface
+│   ├── 📁 styles/            # Estilização
+│   │   └── 📄 main.css       # Estilos globais da aplicação
+│   └── 📄 index.html         # Ponto de entrada da aplicação web
 │
-├── src/
-│ ├── controllers/
-│ │ └── simulacao.controller.js
-│ ├── routes/
-│ │ └── simulacao.routes.js
-│ ├── services/
-│ │ └── simulacao.service.js
-│ ├── utils/
-│ │ └── calculos.js
-│ └── app.js
+├── 📁 src/                   # Núcleo do Backend (Server-side)
+│   ├── 📁 controllers/       # Orquestração de requisições e respostas
+│   ├── 📁 routes/            # Definição das rotas da API
+│   ├── 📁 services/          # Regras de negócio e lógica complexa
+│   ├── 📁 utils/             # Funções utilitárias e cálculos matemáticos
+│   └── 📄 app.js             # Configuração e middlewares do Express
 │
-├── server.js
-├── package.json
-└── README.md
+├── 📁 node_modules/          # Dependências instaladas (Ignorado no Git)
+├── 📄 .gitignore             # Arquivos e pastas ignorados pelo Git
+├── 📄 package-lock.json      # Registro exato das versões das dependências
+├── 📄 package.json           # Manifesto do projeto e scripts
+├── 📄 README.md              # Documentação do projeto
+├── 📄 requests.http          # Arquivo para testes de endpoints
+└── 📄 server.js              # Inicialização do servidor Node.js
 
 
 ---
